@@ -346,7 +346,7 @@ def main(disable_exit=False):
                     EK_obj = EK(email_obj, driver, 'ESET HOME' if args['key'] else 'SMALL BUSINESS')
                     EK_obj.sendRequestForKey()
                     license_name, license_key, license_out_date = EK_obj.getLicenseData()
-                    license_out_date = datetime.datetime.strptime(license_out_date, '%m/%d/%Y').strftime('%d.%m.%Y')
+                    license_out_date = datetime.datetime.strptime(license_out_date, '%m/%d/%Y').strftime('%d/%m/%Y')
                     output_line = '\n'.join([
                         '',
                         '-------------------------------------------------',
@@ -401,7 +401,7 @@ def main(disable_exit=False):
                     output_filename = 'ESET KEYS.txt'
                     EPHK_obj = EPHK(email_obj, eset_password, driver)
                     license_name, license_key, license_out_date = EPHK_obj.getLicenseData()
-                    license_out_date = datetime.datetime.strptime(license_out_date, '%m/%d/%Y').strftime('%d.%m.%Y')
+                    license_out_date = datetime.datetime.strptime(license_out_date, '%m/%d/%Y').strftime('%d/%m/%Y')
                     if license_name is not None:
                         output_line = '\n'.join([
                             '',
