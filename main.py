@@ -413,8 +413,7 @@ def main(disable_exit=False):
                             '---------------------------------------------------------------------',
                             ''
                         ])
-                    out_date = datetime.strptime({license_out_date}, '%d.%m.%Y')
-                    output_line = f'\n🔸 Продукт: **{license_name}**\n🕐 Срок действия: **{out_date}**\n🔐 Ключ активации: ||`{license_key}`||\n'
+                    output_line = f'\n🔸 Продукт: **{license_name}**\n🕐 Срок действия: **{license_out_date}**\n🔐 Ключ активации: ||`{license_key}`||\n'
                     bot.send_message(-1001233475775, output_line + "@esetnod32keyzz")
 
             # end
