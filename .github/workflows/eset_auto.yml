@@ -1,4 +1,4 @@
-name: Generator Auto
+name: Generator Auto Home
 
 on:
   workflow_dispatch:
