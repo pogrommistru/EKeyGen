@@ -17,12 +17,11 @@ on:
         type: choice
         options:
         - 1secmail
-        - hi2in
-        - 10minutemail
         - guerrillamail
         - developermail
         - mailticking
-        default: mailticking
+        - fakemail
+        default: fakemail
       key_type:
         description: 'Choose the key type'
         required: true
