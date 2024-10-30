@@ -41,7 +41,7 @@ jobs:
       - name: Generate key
         run: |
           ACCOUNT=0
-          KEY=1
+          KEY=3
           MAIL=fakemail
           KEY_TYPE=--small-business-key
 
