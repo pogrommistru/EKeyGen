@@ -45,11 +45,12 @@ jobs:
           MAIL=mailticking
           KEY_TYPE=--key
 
-          git clone https://github.com/pogrommistru/EKey.git
-          cd EKey
+          # Setup env
           sudo apt update
-          sudo apt install -y python3-pip
-          sudo pip install -r requirements.txt
+          sudo apt install -y python3-pip python3-venv
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
 
           if [[ ${ACCOUNT} -ne 0 && ${KEY} -ne 0 ]]; then
             seq 1 ${ACCOUNT} | xargs -I {} -P ${ACCOUNT} python3 main.py --chrome --account --email-api ${MAIL} --token ${{ secrets.TOKEN }} --skip-webdriver-menu --skip-update-check --no-logo --disable-progress-bar &
