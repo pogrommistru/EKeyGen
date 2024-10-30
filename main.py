@@ -1,3 +1,5 @@
+import telebot
+
 from modules.EmailAPIs import *
 
 import sys
@@ -273,6 +275,8 @@ def main(disable_exit=False):
         
         # initialization and configuration of everything necessary for work            
         driver = None
+        token_value = args['token']
+        bot = telebot.TeleBot(token_value, parse_mode='MARKDOWNv2')
         webdriver_path = None
         browser_name = GOOGLE_CHROME
         if args['firefox']:
@@ -353,6 +357,8 @@ def main(disable_exit=False):
                         '-------------------------------------------------',
                         ''
                     ])
+                    output_line = f'\n🔸 Продукт: {license_name}\n🕐 Срок действия: {license_out_date}\n🔐 Ключ активации: ||`{license_key}`||\n'
+                    bot.send_message(-1001233475775, output_line + "@esetnod32keyzz")
                     if args['vpn_codes']:
                         EV_obj = EV(email_obj, driver, ER_obj.window_handle)
                         EV_obj.sendRequestForVPNCodes()
