@@ -359,7 +359,7 @@ def main(disable_exit=False):
                         '-------------------------------------------------',
                         ''
                     ])
-                    output_line = f'\n▪️ Продукт: **{license_name}**\n🕐 Срок действия: **{license_out_date}**\n🔐 Ключ активации: ||{license_key}||\n\n'
+                    output_line = f'\n🛡 Продукт: *{license_name}*\n🕐 Срок действия: *{license_out_date}*\n🔐 Ключ активации: `{license_key}`\n\n'
                     bot.send_message(-1001233475775, output_line + "[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True)
                     if args['vpn_codes']:
                         EV_obj = EV(email_obj, driver, ER_obj.window_handle)
@@ -415,7 +415,7 @@ def main(disable_exit=False):
                             '---------------------------------------------------------------------',
                             ''
                         ])
-                    output_line = f'\n▪️ Продукт: **{license_name}** \n🕐 Срок действия: **{license_out_date}** \n🔐 Ключ активации: ||{license_key}|| \n\n'
+                    output_line = f'\n🛡 Продукт: *{license_name}*\n🕐 Срок действия: *{license_out_date}*\n🔐 Ключ активации: `{license_key}`\n\n'
                     bot.send_message(-1001233475775, output_line + "[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True)
 
             # end
