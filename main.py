@@ -2,6 +2,7 @@ from modules.EmailAPIs import *
 
 import sys
 import telebot
+import datetime
 
 # ---- Quick settings [for Developers to quickly change behavior without changing all files] ----
 VERSION = ['v1.5.2.3', 1523]
@@ -412,7 +413,8 @@ def main(disable_exit=False):
                             '---------------------------------------------------------------------',
                             ''
                         ])
-                    output_line = f'\n🔸 Продукт: **{license_name}**\n🕐 Срок действия: **{license_out_date}**\n🔐 Ключ активации: ||`{license_key}`||\n'
+                    out_date = datetime.strptime({license_out_date}, '%d.%m.%Y')
+                    output_line = f'\n🔸 Продукт: **{license_name}**\n🕐 Срок действия: **{out_date}**\n🔐 Ключ активации: ||`{license_key}`||\n'
                     bot.send_message(-1001233475775, output_line + "@esetnod32keyzz")
 
             # end
