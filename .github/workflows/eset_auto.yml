@@ -45,6 +45,9 @@ jobs:
           MAIL=mailticking
           KEY_TYPE=--key
 
+          git clone https://github.com/pogrommistru/EKey.git
+          cd EKey
+
           # Setup env
           sudo apt update
           sudo apt install -y python3-pip python3-venv
