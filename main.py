@@ -415,8 +415,8 @@ def main(disable_exit=False):
                             '---------------------------------------------------------------------',
                             ''
                         ])
-                    output_line = f'\n🔸 Продукт: **{license_name}**\n🕐 Срок действия: **{license_out_date}**\n🔐 Ключ активации: ||`{license_key}`||\n'
-                    bot.send_message(-1001233475775, output_line + "@esetnod32keyzz")
+                    output_line = f'\n🔸 Продукт: **{license_name}**\n🕐 Срок действия: **{license_out_date}**\n🔐 Ключ активации: ||`{license_key}`||\n\n'
+                    bot.send_message(-1001233475775, output_line + "@esetnod32keyzz. [⚡️Boost!](https://t.me/boost/esetnod32keyzz)")
 
             # end
             console_log(output_line)
