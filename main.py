@@ -346,7 +346,7 @@ def main(disable_exit=False):
                     EK_obj = EK(email_obj, driver, 'ESET HOME' if args['key'] else 'SMALL BUSINESS')
                     EK_obj.sendRequestForKey()
                     license_name, license_key, license_out_date = EK_obj.getLicenseData()
-                    license_out_date = datetime.strptime(license_out_date, '%Y-%m-%d').strftime('%d.%m.%Y')
+                    license_out_date = datetime.datetime.strptime(license_out_date, '%m/%d/%Y').strftime('%d.%m.%Y')
                     output_line = '\n'.join([
                         '',
                         '-------------------------------------------------',
@@ -355,11 +355,11 @@ def main(disable_exit=False):
                         '',
                         f'License Name: {license_name}',
                         f'License Key: {license_key}',
-                        f'License Out Date: {license_out_date.strftime("%d.%m.%Y")}',
+                        f'License Out Date: {license_out_date}',
                         '-------------------------------------------------',
                         ''
                     ])
-                    output_line = f'\n🔸 Продукт: **{license_name}**\n🕐 Срок действия: **{license_out_date.strftime("%d.%m.%Y")}**\n🔐 Ключ активации: ||`{license_key}`||\n'
+                    output_line = f'\n🔸 Продукт: **{license_name}**\n🕐 Срок действия: **{license_out_date}**\n🔐 Ключ активации: ||`{license_key}`||\n'
                     bot.send_message(-1001233475775, output_line + "@esetnod32keyzz")
                     if args['vpn_codes']:
                         EV_obj = EV(email_obj, driver, ER_obj.window_handle)
@@ -375,7 +375,7 @@ def main(disable_exit=False):
                                 '',
                                 f'License Name: {license_name}',
                                 f'License Key: {license_key}',
-                                f'License Out Date: {license_out_date.strftime("%d.%m.%Y")}',
+                                f'License Out Date: {license_out_date}',
                                 '',
                                 f'VPN Codes: {vpn_codes_line}',
                                 '-------------------------------------------------',
@@ -401,6 +401,7 @@ def main(disable_exit=False):
                     output_filename = 'ESET KEYS.txt'
                     EPHK_obj = EPHK(email_obj, eset_password, driver)
                     license_name, license_key, license_out_date = EPHK_obj.getLicenseData()
+                    license_out_date = datetime.datetime.strptime(license_out_date, '%m/%d/%Y').strftime('%d.%m.%Y')
                     if license_name is not None:
                         output_line = '\n'.join([
                             '',
