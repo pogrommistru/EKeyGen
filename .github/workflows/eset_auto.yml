@@ -21,14 +21,15 @@ on:
         - developermail
         - mailticking
         - fakemail
-        default: fakemail
+        default: developermail
       key_type:
-        description: 'Choose the key type'
+        description: 'Modes of operation'
         required: true
         type: choice
         options:
         - --key
         - --small-business-key
+        - --vpn-codes
         default: --key
   schedule:
     - cron: "0 */1 * * *"
