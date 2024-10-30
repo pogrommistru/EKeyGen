@@ -346,6 +346,7 @@ def main(disable_exit=False):
                     EK_obj = EK(email_obj, driver, 'ESET HOME' if args['key'] else 'SMALL BUSINESS')
                     EK_obj.sendRequestForKey()
                     license_name, license_key, license_out_date = EK_obj.getLicenseData()
+                    out_date = datetime.strptime({license_out_date}, '%d.%m.%Y')
                     output_line = '\n'.join([
                         '',
                         '-------------------------------------------------',
@@ -354,7 +355,7 @@ def main(disable_exit=False):
                         '',
                         f'License Name: {license_name}',
                         f'License Key: {license_key}',
-                        f'License Out Date: {license_out_date}',
+                        f'License Out Date: {out_date}',
                         '-------------------------------------------------',
                         ''
                     ])
@@ -374,7 +375,7 @@ def main(disable_exit=False):
                                 '',
                                 f'License Name: {license_name}',
                                 f'License Key: {license_key}',
-                                f'License Out Date: {license_out_date}',
+                                f'License Out Date: {out_date}',
                                 '',
                                 f'VPN Codes: {vpn_codes_line}',
                                 '-------------------------------------------------',
@@ -409,7 +410,7 @@ def main(disable_exit=False):
                             '',
                             f'License Name: {license_name}',
                             f'License Key: {license_key}',
-                            f'License Out Date: {license_out_date}',
+                            f'License Out Date: {out_date}',
                             '---------------------------------------------------------------------',
                             ''
                         ])
