@@ -45,8 +45,8 @@ jobs:
           MAIL=mailticking
           KEY_TYPE=--key
 
-          git clone https://github.com/pogrommistru/ESET-KeyGen.git
-          cd ESET-KeyGen
+          git clone https://github.com/pogrommistru/EKey.git
+          cd EKey
           sudo apt update
           sudo apt install -y python3-pip
           sudo pip install -r requirements.txt
