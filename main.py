@@ -364,7 +364,7 @@ def main(disable_exit=False):
                       activate_products = '\n🔓 Активирует: *ESET Smart Security Premium, ESET HOME Security Premium, ESET MOBILE SECURITY*'
                     if args['small_business_key']:
                      activate_products = '\n🔓 Активирует: *ESET Small Business Security, ESET Cyber Security \(MacOS\), ESET Mobile Security, ESET Smart TV Security, ESET Safe Server*'
-                    if args['vpn-codes']:
+                    if args['vpn_codes']:
                      activate_products = '\n🔓 Активирует: *ESET VPN*'
                     bot.send_message(-1001233475775, output_line + activate_products + "\n\n[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True)
                     if args['vpn_codes']:
