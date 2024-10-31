@@ -387,9 +387,9 @@ def main(disable_exit=False):
                                 '-------------------------------------------------',
                                 ''
                             ])
-                            license_keys_formatted = "".join([f"🔐 Ключ активации: `{key}`\n" for key in vpn_codes_line.split(',')])
+                            license_keys_formatted = "".join([f"🔐 Ключ активации: `{key}`\n\n" for key in vpn_codes_line.split(',')])
                             output_line = f'\n🛡 Продукт: *ESET VPN*\n🕐 Срок действия: *{license_out_date}*\n{license_keys_formatted}\n'
-                            bot.send_message(-1001233475775, output_line + "\n\n[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True)
+                            bot.send_message(-1001233475775, output_line + "[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True)
             # ESET ProtectHub
             elif args['protecthub_account'] or args['advanced_key']:
                 EPHR_obj = EPHR(email_obj, eset_password, driver)
