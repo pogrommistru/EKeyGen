@@ -41,7 +41,7 @@ jobs:
       - name: Generate key
         run: |
           ACCOUNT=0
-          KEY=3
+          KEY=2
           MAIL=guerrillamail
           KEY_TYPE=--small-business-key
 
