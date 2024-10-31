@@ -366,7 +366,7 @@ def main(disable_exit=False):
                      activate_products = '\n🔓 Активирует: *ESET Small Business Security, ESET Cyber Security \(MacOS\), ESET Mobile Security, ESET Smart TV Security, ESET Safe Server*'
                     if args['vpn_codes']:
                      activate_products = '\n🔓 Активирует: *ESET Small Business Security, ESET Cyber Security \(MacOS\), ESET Mobile Security, ESET Smart TV Security, ESET Safe Server*'
-                    bot.send_message(-1002475137672, output_line + activate_products + "\n\n[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True)
+                    bot.send_message(-1002475137672, output_line + activate_products + "\n\n[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True, disable_notification=True)
                     if args['vpn_codes']:
                         EV_obj = EV(email_obj, driver, ER_obj.window_handle)
                         EV_obj.sendRequestForVPNCodes()
@@ -389,7 +389,7 @@ def main(disable_exit=False):
                             ])
                             license_keys_formatted = "".join([f"🔐 Ключ активации: `{key}`\n\n" for key in vpn_codes_line.split(', ')])
                             output_line = f'\n🛡 Продукт: *ESET VPN*\n🕐 Срок действия: *{license_out_date}*\n\n{license_keys_formatted}\n'
-                            bot.send_message(-1002475137672, output_line + "[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True)
+                            bot.send_message(-1002475137672, output_line + "[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True, disable_notification=True)
             # ESET ProtectHub
             elif args['protecthub_account'] or args['advanced_key']:
                 EPHR_obj = EPHR(email_obj, eset_password, driver)
@@ -428,7 +428,7 @@ def main(disable_exit=False):
                       activate_products = '\n🔓 Активирует: *ESET Smart Security Premium, ESET HOME Security Premium, ESET MOBILE SECURITY*'
                     if args['small_business_key']:
                      activate_products = '\n🔓 Активирует: *ESET Small Business Security, ESET Cyber Security \(MacOS\), ESET Mobile Security, ESET Smart TV Security, ESET Safe Server*'
-                    bot.send_message(-1002475137672, output_line + activate_products + "\n\n[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True)
+                    bot.send_message(-1002475137672, output_line + activate_products + "\n\n[⚡️Boost\!](https://t\.me/boost/esetnod32keyzz)", disable_web_page_preview=True, disable_notification=True)
 
             # end
             console_log(output_line)
